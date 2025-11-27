@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "oop-homework"
+version = "0.1.0"
+package-mode = false
+description = ""
+authors = ["Максим Бацманов <markgusev995@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pytest = "^9.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
