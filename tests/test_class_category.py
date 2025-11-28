@@ -1,4 +1,4 @@
-from src.classes import Category
+from src.class_category import Category
 
 
 def test_init_category(category_books):
