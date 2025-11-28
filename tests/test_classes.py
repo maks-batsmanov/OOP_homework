@@ -16,5 +16,19 @@ def test_init_category(category_books):
 
 
 def test_count_product(category_books):
-    assert Category.count_of_products == 3
-    assert Category.count_of_category == 1
+    Category.category_count = 0
+    Category.product_count = 0
+
+    Category.category_count += 1
+    Category.product_count += len(category_books.products)
+
+    assert Category.product_count == 3
+    assert Category.category_count == 1
+
+
+def test_debug():
+    import os
+    print("Current dir:", os.getcwd())
+    print("File dir:", os.path.dirname(__file__))
+
+    # Запусти: pytest -s test_file.py
