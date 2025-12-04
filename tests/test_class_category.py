@@ -32,3 +32,8 @@ def test_add_product(category_books):
         "The Chronicles of Narnia, 130 руб. Остаток: 12 шт.\n"
         "Twenty thousand leagues under the sea, 300 руб. Остаток: 2 шт."
     )
+
+
+def test_category_str(category_books):
+    result = str(category_books)
+    assert result == 'books, количество продуктов: 31 шт.'

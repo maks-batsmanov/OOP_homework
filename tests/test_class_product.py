@@ -42,3 +42,13 @@ def test_price_setter_low_price(mock_input, init_product):
     assert init_product.price == 30.00
     init_product.price = 20.00
     assert init_product.price == 30.00
+
+
+def test_product_str(product_labubu):
+    obj_str = str(product_labubu)
+    assert obj_str == 'Labubu, 100.0 руб. Остаток: 10 шт.'
+
+
+def test_product_add(product_labubu, init_product):
+    result = product_labubu + init_product
+    assert result == 1300
