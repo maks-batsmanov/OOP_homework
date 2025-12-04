@@ -23,5 +23,5 @@ class Category:
     def products(self):
         result = ''
         for product in self.__products:
-            result += f"{product.name}, {product.price}. руб. Остаток: {product.quantity} шт."
+            result += f"{product.name}, {product.price}. руб. Остаток: {product.quantity} шт.\n"
         return result
