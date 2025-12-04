@@ -10,21 +10,22 @@ https://github.com/maks-batsmanov/OOP_homework
 poetry install
 ```
 ## Документация
-1. Модуль classes.py содержит классы Product и Category.
+1. Модуль class_product.py содержит класс Product.
 2. Класс Product имеет следующие свойства:
 название (name),
 описание (description),
 цена (price),
 количество в наличии (quantity).
-3. Класс Category имеет следующие свойства:
+3. Модуль class_category.py содержит класс Category.
+4. Класс Category имеет следующие свойства:
 название (name),
 описание (description),
 список товаров категории (products).
-4. Для класса Category есть два атрибута класса: category_count, product_count.
+5. Для класса Category есть два атрибута класса: category_count, product_count.
 Доступ к этим атрибутам есть у каждого объекта класса. 
 В них храниться общая информация для всех объектов. 
 Эти атрибуты хранят в себе количество категорий и количество товаров.
-5. Модуль read_data.py содержит функцию create_object_of_class, которая 
+6. Модуль read_data.py содержит функцию create_object_of_class, которая 
 принимает имя json-файла из папки data и возвращает объект класса.
 
 ## Лицензия:

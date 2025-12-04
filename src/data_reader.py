@@ -1,8 +1,8 @@
 import json
 import os
 
-from src.classes import Category, Product
-
+from src.class_category import Category
+from src.class_product import Product
 
 def create_object_of_class(file_name):
     """Функция принимает имя json-файла из папки data
