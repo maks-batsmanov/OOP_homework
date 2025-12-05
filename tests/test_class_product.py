@@ -52,3 +52,6 @@ def test_product_str(product_labubu):
 def test_product_add(product_labubu, init_product):
     result = product_labubu + init_product
     assert result == 1300
+
+
+def
