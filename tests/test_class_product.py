@@ -66,10 +66,9 @@ def test_product_str(product_labubu):
 
 
 def test_product_add(product_labubu, init_product):
-    result = product_labubu + init_product
-    assert result == 1300
+    assert product_labubu + init_product == 1300
 
 
 def test_product_type_error(init_product):
     with pytest.raises(TypeError):
-        result = init_product + 'not product'
+        _ = init_product + 'not product'
