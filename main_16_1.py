@@ -1,4 +1,3 @@
-from src.class_product import Product
 from src.class_category import Category
 from src.class_smartphone import Smartphone
 from src.class_lawngrass import LawnGrass
