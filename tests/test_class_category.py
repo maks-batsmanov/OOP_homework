@@ -1,3 +1,5 @@
+import pytest
+
 from src.class_category import Category
 from src.class_product import Product
 
@@ -32,6 +34,9 @@ def test_add_product(category_books):
         "The Chronicles of Narnia, 130 руб. Остаток: 12 шт.\n"
         "Twenty thousand leagues under the sea, 300 руб. Остаток: 2 шт."
     )
+    error_product = 'Not product'
+    with pytest.raises(TypeError):
+        category_books.add_product(error_product)
 
 
 def test_category_str(category_books):

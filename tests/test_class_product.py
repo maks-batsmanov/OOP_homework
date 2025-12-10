@@ -1,5 +1,5 @@
 from unittest.mock import patch
-
+import pytest
 from src.class_product import Product
 
 
@@ -16,6 +16,22 @@ def test_new_product(product_labubu_dict, list_for_comparison):
     assert result.description == 'toy'
     assert result.price == 100
     assert result.quantity == 14
+
+
+def test_new_product_without_duplicate(list_for_comparison):
+    """Тестируем создание нового товара, когда в списке нет дубликатов"""
+    params = {
+        'name': 'Новый товар',
+        'description': 'Описание',
+        'price': 1000,
+        'quantity': 5
+    }
+    result = Product.new_product(params, list_for_comparison)
+
+    assert isinstance(result, Product)
+    assert result.name == 'Новый товар'
+    assert result.price == 1000
+    assert result.quantity == 5
 
 
 def test_price(init_product):
@@ -50,5 +66,9 @@ def test_product_str(product_labubu):
 
 
 def test_product_add(product_labubu, init_product):
-    result = product_labubu + init_product
-    assert result == 1300
+    assert product_labubu + init_product == 1300
+
+
+def test_product_type_error(init_product):
+    with pytest.raises(TypeError):
+        _ = init_product + 'not product'
