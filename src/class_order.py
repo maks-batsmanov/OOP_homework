@@ -9,7 +9,9 @@ class Order(BaseCategory):
 
     def __str__(self):
         """Выводит название продукта, его количества, итоговую стоимость"""
-        return f'{self.product.name}, количество проданных продуктов: {self.sold}, итоговая цена: {self.total_cost} руб.'
+        return (
+            f"{self.product.name}, количество проданных продуктов: {self.sold}, итоговая цена: {self.total_cost} руб."
+        )
 
     @property
     def total_cost(self):
