@@ -13,4 +13,3 @@ def test_init_smartphone():
     assert smartphone1.model == "S23 Ultra"
     assert smartphone1.memory == 256
     assert smartphone1.color == "Серый"
-
