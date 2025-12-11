@@ -1,5 +1,4 @@
 from src.base_category import BaseCategory
-from src.class_product import Product
 
 
 class Order(BaseCategory):
