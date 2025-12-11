@@ -1,5 +1,8 @@
+from src.base_class import BaseProduct
+from src.mixinlog import MixinLog
 
-class Product:
+
+class Product(MixinLog, BaseProduct):
     """Класс для описания продукта """
     name: str
     description: str
@@ -11,6 +14,7 @@ class Product:
         self.description = description
         self.__price = price
         self.quantity = quantity
+        super().__init__()
 
     def __str__(self):
         return f'{self.name}, {self.__price} руб. Остаток: {self.quantity} шт.'
