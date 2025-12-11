@@ -1,7 +1,8 @@
+from src.base_category import BaseCategory
 from src.class_product import Product
 
 
-class Category:
+class Category(BaseCategory):
     """Класс для представления категорий """
     name: str
     description: str
@@ -33,3 +34,13 @@ class Category:
     @property
     def products(self):
         return '\n'.join(str(product) for product in self.__products)
+
+    @property
+    def total_quantity(self):
+        """Возвращает количество всех товаров в категории"""
+        return sum(product.quantity for product in self.__products)
+
+    @property
+    def total_cost(self):
+        """Возвращает сумму всех товаров в категории"""
+        return sum(product.price * product.quantity for product in self.__products)
