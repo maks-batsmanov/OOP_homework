@@ -72,3 +72,8 @@ def test_product_add(product_labubu, init_product):
 def test_product_type_error(init_product):
     with pytest.raises(TypeError):
         _ = init_product + 'not product'
+
+
+def test_zero_quantity():
+    with pytest.raises(ValueError, match='Товар с нулевым количеством не может быть добавлен'):
+        Product('phone', 'Ipone', 50000, 0)
