@@ -49,11 +49,11 @@ def test_category_total_cost_quantity(category_books):
     assert category_books.total_quantity == 31
 
 
-def test_average_price(category_books):
-    result = category_books.average_price()
-    assert round(result, 2) == 117.42
+def test_middle_price(category_books):
+    result = category_books.middle_price()
+    assert round(result, 2) == 1213.33
 
 
-def test_average_price_zero_quantity(category_books_product_zero):
-    result = category_books_product_zero.average_price()
+def test_middle_price_zero_quantity(category_books_product_zero):
+    result = category_books_product_zero.middle_price()
     assert result == 0
