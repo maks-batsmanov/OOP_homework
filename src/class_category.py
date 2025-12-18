@@ -44,3 +44,13 @@ class Category(BaseCategory):
     def total_cost(self):
         """Возвращает сумму всех товаров в категории"""
         return sum(product.price * product.quantity for product in self.__products)
+
+    def middle_price(self):
+        """Возвращает среднюю цену всех товаров"""
+        try:
+            total_cost = self.total_cost
+            result = total_cost / len(self.__products)
+        except ZeroDivisionError:
+            return 0
+        else:
+            return result

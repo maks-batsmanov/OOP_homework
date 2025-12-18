@@ -27,6 +27,12 @@ def list_for_comparison():
 
 
 @pytest.fixture
+def category_books_product_zero():
+    result = Category('books', 'fantasy', [])
+    return result
+
+
+@pytest.fixture
 def product_labubu_dict():
     return {'name': 'Labubu', 'description': 'toy', 'price': 100.00, 'quantity': 10}
 
